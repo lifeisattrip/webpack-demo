@@ -16,7 +16,7 @@ npm install webpack-cli --save-dev
 ```javascript
 // webpack.config.js
 module.exports = {
-    entry: './main.js',
+    entry: './main.ts',
     output: {
       filename: 'bundle.js'
     }
@@ -106,3 +106,49 @@ https://www.cnblogs.com/wonyun/p/6030090.html
     })
 ]
 ```
+
+
+
+## TS支持
+
+npm install -D typescript ts-loader 
+
+
+
+tsc --init
+
+### loader配置
+
+```javascript
+{
+    test: /\.tsx?$/,
+    use: {
+        loader: 'ts-loader'
+    }
+}
+```
+
+**resolve什么意思**？？？
+
+webpack resolve配置说明 https://www.cnblogs.com/joyco773/p/9049760.html
+
+```javascript
+resolve: {
+    extensions: [".ts", ".js"],
+    alias: {
+        "@":  path.resolve(__dirname,"src"),
+    },
+},
+```
+
+typescript两种方案？
+
+https://my.oschina.net/u/4384335/blog/4282316/print
+
+
+
+typescript  lib配置什么意思
+
+typescript 配置说明https://segmentfault.com/a/1190000021421461
+
+https://www.jianshu.com/p/8e1f8ca2837b
