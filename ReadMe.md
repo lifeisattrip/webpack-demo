@@ -48,7 +48,9 @@ pm install --save-dev babel-loader
 
 添加新的js文件main.js依赖hello.js
 
+### sourcemap 配置
 
+https://www.cnblogs.com/warm-stranger/p/12015860.html
 
 ## webpack-dev-server使用
 
@@ -152,3 +154,15 @@ typescript  lib配置什么意思
 typescript 配置说明https://segmentfault.com/a/1190000021421461
 
 https://www.jianshu.com/p/8e1f8ca2837b
+
+
+
+### Vue
+
+https://www.jianshu.com/p/8ba2cdbfabd7
+
+You are using the runtime-only build of Vue where the template compiler is not available.
+
+错误及解决方法
+
+https://blog.csdn.net/wxl1555/article/details/83187647

@@ -6,6 +6,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 
 module.exports = {
+
     //模式的区别
     mode: 'development',
     //如果是多个js可以命名 并在后面指定加入哪个js
@@ -20,6 +21,7 @@ module.exports = {
     resolve: {
         extensions: [".ts", ".js", '.json'],
         alias: {
+            vue$: "vue/dist/vue.esm.js", //加上这一句 fix where the template compiler is not available.
             "@":  path.resolve(__dirname,"src"),
         },
     },
