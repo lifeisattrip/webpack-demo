@@ -1,4 +1,4 @@
-import {ttv} from './hello'
+import {ttv} from './index'
 import Vue from 'vue'
 import Component from 'vue-class-component'
 
@@ -12,7 +12,7 @@ hello(ttv)
 @Component
 export default class MyComp extends Vue {
     msg: any = 1
-    message:number = 10
+    message:number = 1011
     mounted() {
         setInterval((): void =>{
             this.msg = this.msg+10

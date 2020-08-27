@@ -11,8 +11,8 @@ module.exports = {
     mode: 'development',
     //如果是多个js可以命名 并在后面指定加入哪个js
     entry: {
-        main: './main.ts',
-        hello: './hello.ts'
+        bigscreen: path.resolve(__dirname, 'src/business/station.ts'),
+        index: path.resolve(__dirname, 'src/business/index.ts'),
     },
     output: {
         filename: '[name].js',
@@ -55,9 +55,9 @@ module.exports = {
                 minifyCSS: true// 压缩内联css
             },
             filename: 'index.html', //生成的html文件名
-            template: 'index.html', //作为模板的html文件名 支持html、jade、ejs
+            template: 'src/index.html', //作为模板的html文件名 支持html、jade、ejs
             hash: true,
-            chunks: ['main']
+            chunks: ['index']
         }),
         new HtmlWebpackPlugin({ // 打包输出HTML
             title: '政企信息化2 ',
@@ -66,10 +66,10 @@ module.exports = {
                 collapseWhitespace: true, // 删除空白符与换行符
                 minifyCSS: true// 压缩内联css
             },
-            filename: 'index2.html', //生成的html文件名
-            template: 'index.html', //作为模板的html文件名 支持html、jade、ejs
+            filename: 'station.html', //生成的html文件名
+            template: 'src/station.html', //作为模板的html文件名 支持html、jade、ejs
             hash: true,
-            chunks: ['hello']
+            chunks: ['station']
         })
     ]
 };

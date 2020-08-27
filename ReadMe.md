@@ -16,7 +16,7 @@ npm install webpack-cli --save-dev
 ```javascript
 // webpack.config.js
 module.exports = {
-    entry: './main.ts',
+    entry: './station.ts',
     output: {
       filename: 'bundle.js'
     }
