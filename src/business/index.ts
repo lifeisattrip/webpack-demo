@@ -2,6 +2,8 @@ import Component from "vue-class-component";
 import Vue from "vue";
 import {Ret} from "../shared/common.model";
 
+
+
 interface testDto {
     test: number;
     name: string;

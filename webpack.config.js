@@ -29,12 +29,13 @@ module.exports = {
     module: {
         //webpack使用loader的方式处理各种各样的资源
         rules: [
-            {
-                test: /\.ts?$/,
-                use: {
-                    loader: 'ts-loader'
-                }
-            }
+            {test: /\.ts?$/, use: {loader: 'ts-loader'}},
+            {test: /\.less$/, loader: 'style-loader!postcss-loader!less-loader'},
+            {test: /\.css$/, loader: 'style-loader!css-loader'},
+            {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"},
+            {test: /\.(woff|woff2)$/, loader: "url?prefix=font/&limit=5000"},
+            {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream"},
+            {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml"}
         ]
     },
     // sourcemap配置

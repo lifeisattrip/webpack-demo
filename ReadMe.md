@@ -172,7 +172,7 @@ https://blog.csdn.net/wxl1555/article/details/83187647
 ### jquery
 
 ```
-npm install jquery  @types/jquery --save
+npm install jquery  @types/jquery --save-dev
 ```
 
 https://blog.csdn.net/a2500397/article/details/84872678
@@ -201,3 +201,28 @@ npm install --save @types/echarts
 echarts必须用document对象获取 element
 
 引用document需要再tsconfig lib中添加dom
+
+
+
+### bootstrap
+
+```
+npm install jquery --save *// Bootstrap4.x 依赖JQuery，所以需要先安装JQuery*
+npm install popper.js --save *// Bootstrap4.x 依赖Popper，所以需要先安装Popper*
+npm install bootstrap --save *// 安装Bootstrap4.x*
+cnpm  install  file-loader  url-loader --save-dev
+```
+
+```css
+npm install @types/bootstrap --save-dev
+```
+
+
+
+https://yanxiaojun617.gitbook.io/webpack4-bootstrap4-demo/use_html5_form_validation
+
+
+
+# [webpack多页应用架构系列](https://segmentfault.com/a/1190000006843916)
+
+https://segmentfault.com/a/1190000006843916
