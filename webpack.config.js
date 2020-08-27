@@ -3,7 +3,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-
+const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 
@@ -11,7 +12,7 @@ module.exports = {
     mode: 'development',
     //如果是多个js可以命名 并在后面指定加入哪个js
     entry: {
-        bigscreen: path.resolve(__dirname, 'src/business/station.ts'),
+        station: path.resolve(__dirname, 'src/business/station.ts'),
         index: path.resolve(__dirname, 'src/business/index.ts'),
     },
     output: {
@@ -22,7 +23,7 @@ module.exports = {
         extensions: [".ts", ".js", '.json'],
         alias: {
             vue$: "vue/dist/vue.esm.js", //加上这一句 fix where the template compiler is not available.
-            "@":  path.resolve(__dirname,"src"),
+            "@": path.resolve(__dirname, "src"),
         },
     },
     module: {
@@ -47,6 +48,15 @@ module.exports = {
         //新的用法
         // All files inside webpack's output.path directory will be removed once
         new CleanWebpackPlugin(),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {from: 'src/data', to: 'data'}
+            ]
+        }),
         new HtmlWebpackPlugin({ // 打包输出HTML
             title: '政企信息化 ',
             minify: { // 压缩HTML文件

@@ -166,3 +166,33 @@ You are using the runtime-only build of Vue where the template compiler is not a
 错误及解决方法
 
 https://blog.csdn.net/wxl1555/article/details/83187647
+
+
+
+### jquery
+
+npm install jquery
+
+```
+npm install --save-dev @types/jquery
+```
+
+https://blog.csdn.net/a2500397/article/details/84872678
+
+插件
+
+```
+webpack.ProvidePlugin
+```
+
+### 静态资源处理
+
+```
+npm i copy-webpack-plugin --save-dev
+```
+
+### echart
+
+```
+npm install echarts --save
+```

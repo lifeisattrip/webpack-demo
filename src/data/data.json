@@ -1,0 +1,94 @@
+{
+  "code": 0,
+  "data": {
+    "electricProductionDaily": 701.53,
+    "electricProductionMonthly": 2419.6,
+    "electricProductionYearly": 65353.69,
+    "eafYearly": 98.63,
+    "annualUtilizationHours": 968.92,
+    "plannedCompletionRateYearly": 47,
+    "onGridEnergy": 689.24,
+    "lineLoss": 12.29,
+    "reactiveCompensation": 18,
+    "safeRunDayNum": 3019,
+    "co2ReduceTotal": 5.6,
+    "so2ReduceTotal": 0.04,
+    "coalReduceTotal": 2.42,
+    "installedCapacityTotal": 674.5,
+    "fdInstalledCapacity": 614.5,
+    "gfInstalledCapacity": 60,
+    "buildingInstalledCapacity": 0,
+    "should": 417,
+    "real": 336,
+    "prediction": 407,
+    "theory": 124,
+    "assure": 402,
+    "best": 478,
+    "shouldSendPower": [
+      400,
+      417,
+      410,
+      433,
+      425,
+      410,
+      417
+    ],
+    "realSendPower": [
+      323,
+      333,
+      355,
+      345,
+      300,
+      335,
+      336
+    ],
+    "predictionSendPower": [
+      389,
+      400,
+      388,
+      375,
+      396,
+      389,
+      407
+    ],
+    "theorySendPower": [
+      132,
+      135,
+      111,
+      145,
+      135,
+      156,
+      124
+    ],
+    "assureSendPower": [
+      412,
+      400,
+      422,
+      369,
+      412,
+      389,
+      402
+    ],
+    "bestSendPower": [
+      456,
+      425,
+      499,
+      489,
+      436,
+      458,
+      478
+    ],
+    "time": [
+      "周一",
+      "周二",
+      "周三",
+      "周四",
+      "周五",
+      "周六",
+      "周日"
+    ],
+    "temperature": 22,
+    "humidity": 48,
+    "windSpeed": 12
+  }
+}
