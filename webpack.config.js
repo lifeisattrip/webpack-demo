@@ -30,12 +30,34 @@ module.exports = {
         //webpack使用loader的方式处理各种各样的资源
         rules: [
             {test: /\.ts?$/, use: {loader: 'ts-loader'}},
-            {test: /\.less$/, loader: 'style-loader!postcss-loader!less-loader'},
-            {test: /\.css$/, loader: 'style-loader!css-loader'},
-            {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"},
-            {test: /\.(woff|woff2)$/, loader: "url?prefix=font/&limit=5000"},
-            {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=application/octet-stream"},
-            {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&mimetype=image/svg+xml"}
+            {
+                test: /\.(scss)$/,
+                use: [
+                    {
+                        // Adds CSS to the DOM by injecting a `<style>` tag
+                        loader: 'style-loader'
+                    },
+                    {
+                        // Interprets `@import` and `url()` like `import/require()` and will resolve them
+                        loader: 'css-loader'
+                    },
+                    {
+                        // Loader for webpack to process CSS with PostCSS
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: function () {
+                                return [
+                                    require('autoprefixer')
+                                ];
+                            }
+                        }
+                    },
+                    {
+                        // Loads a SASS/SCSS file and compiles it to CSS
+                        loader: 'sass-loader'
+                    }
+                ]
+            },
         ]
     },
     // sourcemap配置

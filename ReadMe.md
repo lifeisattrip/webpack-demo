@@ -206,11 +206,28 @@ echarts必须用document对象获取 element
 
 ### bootstrap
 
+
+
+https://stevenwestmoreland.com/2018/01/how-to-include-bootstrap-in-your-project-with-webpack.html
+
+
+
+Use the following command to install Bootstrap and its peer dependencies, [jQuery](https://jquery.com/) and [Popper](https://popper.js.org/):
+
 ```
-npm install jquery --save *// Bootstrap4.x 依赖JQuery，所以需要先安装JQuery*
-npm install popper.js --save *// Bootstrap4.x 依赖Popper，所以需要先安装Popper*
-npm install bootstrap --save *// 安装Bootstrap4.x*
-cnpm  install  file-loader  url-loader --save-dev
+$ npm install bootstrap jquery popper.js --save
+```
+
+If you choose to import Bootstrap’s JavaScript plugins individually as needed, you must also install [exports-loader](https://github.com/webpack-contrib/exports-loader).
+
+```
+$ npm install exports-loader --save-dev
+```
+
+You’ll need to install the required loaders and postcss plugins for compiling and bundling Bootstrap precompiled [Sass](http://sass-lang.com/) files.
+
+```shell
+$ npm install autoprefixer css-loader node-sass postcss-loader sass-loader style-loader --save-dev
 ```
 
 ```css
@@ -226,3 +243,7 @@ https://yanxiaojun617.gitbook.io/webpack4-bootstrap4-demo/use_html5_form_validat
 # [webpack多页应用架构系列](https://segmentfault.com/a/1190000006843916)
 
 https://segmentfault.com/a/1190000006843916
+
+
+
+https://stevenwestmoreland.com/2018/01/how-to-include-bootstrap-in-your-project-with-webpack.html

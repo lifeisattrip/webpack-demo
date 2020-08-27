@@ -1,6 +1,8 @@
 import Component from "vue-class-component";
 import Vue from "vue";
 import {Ret} from "../shared/common.model";
+import 'bootstrap';
+import '../style/app.scss';
 
 
 
