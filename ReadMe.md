@@ -171,15 +171,15 @@ https://blog.csdn.net/wxl1555/article/details/83187647
 
 ### jquery
 
-npm install jquery
-
 ```
-npm install --save-dev @types/jquery
+npm install jquery  @types/jquery --save
 ```
 
 https://blog.csdn.net/a2500397/article/details/84872678
 
 插件
+
+插件的用法3之后版本有变化，要参考最新的使用方法
 
 ```
 webpack.ProvidePlugin
@@ -195,4 +195,9 @@ npm i copy-webpack-plugin --save-dev
 
 ```
 npm install echarts --save
+npm install --save @types/echarts
 ```
+
+echarts必须用document对象获取 element
+
+引用document需要再tsconfig lib中添加dom
