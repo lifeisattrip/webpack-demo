@@ -31,6 +31,14 @@ module.exports = {
         rules: [
             {test: /\.ts?$/, use: {loader: 'ts-loader'}},
             {
+                test: /\.(png|jpg|gif|svg)$/,
+                loader: 'file-loader',
+                //保持原有的文件命名，注释掉的话就是md5的文件名方式
+                // options: {
+                //     name: 'images/[name].[ext]'
+                // }
+            },
+            {
                 test: /\.(scss)$/,
                 use: [
                     {
