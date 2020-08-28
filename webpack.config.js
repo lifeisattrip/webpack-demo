@@ -112,5 +112,8 @@ module.exports = {
             hash: true,
             chunks: ['station']
         })
-    ]
+    ],
+    devServer: {
+        open: true
+    }
 };

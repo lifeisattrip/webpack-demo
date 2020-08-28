@@ -1,6 +1,5 @@
-// import echarts from 'echarts'
-// 引入 ECharts 主模块
-var echarts = require('echarts/lib/echarts');
+// 引入 ECharts 主模块  require方式按需引入
+const echarts = require('echarts/lib/echarts');
 // 引入柱状图
 require('echarts/lib/chart/bar');
 // 引入提示框和标题组件
@@ -8,8 +7,8 @@ require('echarts/lib/component/tooltip');
 require('echarts/lib/component/title');
 
 // 基于准备好的dom，初始化echarts实例
-const chart:HTMLDivElement = document.getElementById(`main`) as HTMLDivElement;
-var myChart = echarts.init(chart);
+const chart: HTMLDivElement = document.getElementById(`main`) as HTMLDivElement;
+const myChart = echarts.init(chart);
 // 绘制图表
 myChart.setOption({
     title: {
